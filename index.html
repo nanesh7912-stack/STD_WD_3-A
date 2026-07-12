@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tic Tac Toe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="board-frame">
+
+  <h1 class="title">Tic&nbsp;Tac&nbsp;Toe</h1>
+
+  <div class="controls">
+    <div class="mode-toggle" id="modeToggle">
+      <button class="mode-btn active" data-mode="cpu">Vs Computer</button>
+      <button class="mode-btn" data-mode="pvp">Two Player</button>
+    </div>
+
+    <div class="difficulty-toggle" id="difficultyToggle">
+      <button class="diff-btn" data-diff="easy">Easy</button>
+      <button class="diff-btn active" data-diff="unbeatable">Unbeatable</button>
+    </div>
+  </div>
+
+  <p class="status" id="status">Your move — you're X</p>
+
+  <div class="grid" id="grid">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+    <svg class="win-line" id="winLine" viewBox="0 0 300 300"><line id="winLineEl" x1="0" y1="0" x2="0" y2="0"/></svg>
+  </div>
+
+  <div class="scoreboard">
+    <div class="score-item">
+      <span class="score-label x-label">X</span>
+      <span class="score-value" id="scoreX">0</span>
+    </div>
+    <div class="score-item">
+      <span class="score-label draw-label">Draws</span>
+      <span class="score-value" id="scoreDraw">0</span>
+    </div>
+    <div class="score-item">
+      <span class="score-label o-label" id="oLabel">O · CPU</span>
+      <span class="score-value" id="scoreO">0</span>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-primary" id="newGameBtn">New game</button>
+    <button class="btn btn-ghost" id="resetScoresBtn">Reset scores</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
